@@ -8,15 +8,18 @@ function Item({ id, title, desc, date, like }) {
       <h4>
         <a href="">{title}</a>
       </h4>
-      <span
-        onClick={() => {
-          setCount(count + 1)
-        }}
-        className="like-button"
-      >
-        👍
+
+      <div className="like-group">
+        <span
+          onClick={() => {
+            setCount(count + 1)
+          }}
+          className="like-button"
+        >
+          👍
+        </span>
         <strong>{count}</strong>
-      </span>
+      </div>
       <p className="issue">{date}</p>
     </div>
   )

@@ -1,15 +1,36 @@
 import { useState } from 'react'
 import './App.css'
+import List from './components/List'
+import Modal from './components/Modal'
 
 function App() {
   const logo = 'Ryeowon′s Blog'
 
-  const [title, setTitle] = useState([
-    '코트 추천',
-    '다이어트',
-    '졸음을 쫓는 법',
-  ])
-  const [like, setLike] = useState(0)
+  const dummyData = [
+    {
+      id: 0,
+      title: '프론트엔드',
+      desc: '프론트엔드 개발자가 되고싶어요',
+      date: '2022/11/09',
+      like: 0,
+    },
+    {
+      id: 1,
+      title: '나의 github',
+      desc: 'https://github.com/rwony/react-basic-blog',
+      date: '2022/11/09',
+      like: 0,
+    },
+    {
+      id: 2,
+      title: '이건 뭘까요?',
+      desc: '리액트로 간단하게 만드는 블로그 사이트입니다.',
+      date: '2022/11/09',
+      like: 0,
+    },
+  ]
+
+  const [modal, setModal] = useState(false)
 
   return (
     <div className="App">
@@ -19,57 +40,9 @@ function App() {
         </h4>
       </div>
 
-      <div className="list">
-        <h4>{title[0]}</h4>
-        <span
-          onClick={() => {
-            setLike(like + 1)
-          }}
-          className="like-button"
-        >
-          👍
-          <strong>{like}</strong>
-        </span>
-        <p className="issue">11월 9일 발행</p>
-      </div>
-      <div className="list">
-        <h4>{title[1]}</h4>
-        <span
-          onClick={() => {
-            setLike(like + 1)
-          }}
-          className="like-button"
-        >
-          👍
-          <strong>{like}</strong>
-        </span>
-        <p className="issue">11월 9일 발행</p>
-      </div>
-      <div className="list">
-        <h4>{title[2]}</h4>
-        <span
-          onClick={() => {
-            setLike(like + 1)
-          }}
-          className="like-button"
-        >
-          👍
-          <strong>{like}</strong>
-        </span>
-        <p className="issue">11월 9일 발행</p>
-      </div>
+      <List data={dummyData} modal={modal} />
 
-      <Modal />
-    </div>
-  )
-}
-
-function Modal() {
-  return (
-    <div className="modal">
-      <h4>제목</h4>
-      <p>작성일자</p>
-      <p>내용</p>
+      {modal ? <Modal /> : ''}
     </div>
   )
 }

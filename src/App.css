@@ -80,21 +80,38 @@ address {
 }
 
 .list h4 {
+  width: fit-content;
   padding-bottom: 10px;
-}
-
-.like-button {
-  position: absolute;
-  top: 20px;
-  right: 40px;
   cursor: pointer;
 }
 
-.like-button strong {
+.button-group {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+}
+
+.button-group .like-group {
+  margin-bottom: 10px;
+}
+
+.button-group .like-group .like-button {
+  cursor: pointer;
+}
+
+.button-group .like-group strong {
   margin-top: 2px;
   margin-left: 3px;
   color: #191a20;
-  cursor: auto;
+}
+
+.button-group .delete-button {
+  width: 40px;
+  padding: 4px;
+  border-radius: 4px;
+  background-color: #eb4646;
+  color: #fff;
+  font-size: 12px;
 }
 
 .list .issue {
@@ -102,7 +119,34 @@ address {
   color: #8c8d96;
 }
 
+.input-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.input-group input {
+  padding: 4px;
+  margin-right: 5px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+}
+
+.input-group button {
+  padding: 4px 12px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+}
+
+/* Modal */
 .modal {
   padding: 20px;
+  margin-top: 20px;
   background-color: #f7f8fa;
+}
+
+.modal h4,
+p {
+  padding-bottom: 20px;
 }
