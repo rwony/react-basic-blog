@@ -1,5 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap');
 /* global */
 * {
   margin: 0;
@@ -62,49 +65,6 @@ address {
   font-style: normal;
 }
 
-/* nav */
-.black-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #000;
-  width: 100%;
-  height: 50px;
-  color: white;
-}
-
-.list {
-  position: relative;
-  padding: 20px;
-  border-bottom: 1px solid #000;
-}
-
-.list h4 {
-  width: fit-content;
-  padding-bottom: 10px;
-  cursor: pointer;
-}
-
-.button-group {
-  position: absolute;
-  top: 20px;
-  right: 40px;
-}
-
-.button-group .like-group {
-  margin-bottom: 10px;
-}
-
-.button-group .like-group .like-button {
-  cursor: pointer;
-}
-
-.button-group .like-group strong {
-  margin-top: 2px;
-  margin-left: 3px;
-  color: #191a20;
-}
-
 .button-group .delete-button {
   width: 40px;
   padding: 4px;
@@ -112,41 +72,4 @@ address {
   background-color: #eb4646;
   color: #fff;
   font-size: 12px;
-}
-
-.list .issue {
-  font-size: 12px;
-  color: #8c8d96;
-}
-
-.input-group {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-
-.input-group input {
-  padding: 4px;
-  margin-right: 5px;
-  border: 1px solid lightgray;
-  border-radius: 4px;
-}
-
-.input-group button {
-  padding: 4px 12px;
-  border: 1px solid lightgray;
-  border-radius: 4px;
-}
-
-/* Modal */
-.modal {
-  padding: 20px;
-  margin-top: 20px;
-  background-color: #f7f8fa;
-}
-
-.modal h4,
-p {
-  padding-bottom: 20px;
 }
