@@ -1,4 +1,11 @@
-p {
-  color: red;
-  font-size: 12px;
-}
+@import './constants/colors';
+@import './constants/typography';
+@import './constants/breakpoint';
+@import './constants/box-shadows';
+@import './constants/z-indexes';
+@import './constants/dimensions';
+@import './constants/grids';
+
+@import './base/normalize';
+@import './base/reset';
+@import './base/globals';

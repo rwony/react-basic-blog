@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './App.css'
+import './style.css'
 import List from './components/List'
 import Modal from './components/Modal'
 import Nav from './components/Nav'
@@ -35,7 +35,7 @@ function App() {
     <div className="App">
       <Nav />
 
-      {/* <List data={dummyData} /> */}
+      <List data={dummyData} />
     </div>
   )
 }
